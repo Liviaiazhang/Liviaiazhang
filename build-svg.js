@@ -5,7 +5,7 @@ const https = require("https");
 const TIMEZONE   = "America/New_York";
 const BASE_PRICE = 1400;              // synthetic "share price" anchor
 const ALWAYS_UP  = true;             // showcase mode: always a small green gain
-const SIGNALS    = ["STRONG BUY", "OPEN TO OFFERS", "HIRE SIGNAL", "UNDERVALUED"];
+const SIGNAL     = "STRONG BUY";      // fixed showcase signal
 
 // --- weather ---
 const WEATHER_CITY = "Boston";        // your city
@@ -14,11 +14,11 @@ const OWM_KEY = process.env.OWM_KEY || "";   // set as a GitHub Actions secret
 const WEATHER_FALLBACK = { temp: "—", icon: "\u2601\ufe0f", sky: "offline" }; // used if API fails
 
 const TAPE_ITEMS = [
-  "MS INFORMATION SYSTEMS @ NORTHEASTERN",
-  "SOFTWARE / DATA ENGINEER",
+  "SOFTWARE / DATA ENGINEER \u00b7 MS INFORMATION SYSTEMS @ NORTHEASTERN",
   "NOW BUILDING: FINNSPHERE \u2014 AI FINANCIAL RESEARCH ASSISTANT",
   "OPEN TO 2026 NEW GRAD ROLES",
-  "PYTHON \u00b7 SQL \u00b7 REACT \u00b7 AWS \u00b7 DOCKER",
+  "PYTHON \u00b7 JAVA \u00b7 TYPESCRIPT \u00b7 SQL \u00b7 REACT \u00b7 FASTAPI \u00b7 AWS \u00b7 DOCKER",
+  "AI / LLM: LANGGRAPH \u00b7 RAG \u00b7 EMBEDDINGS \u00b7 VECTOR SEARCH",
   "LET'S CONNECT \u2197 linkedin.com/in/di-olivia-zhang-b0b382333",
 ];
 // ==========================================
@@ -28,10 +28,10 @@ const clamp=(v,lo,hi)=>Math.max(lo,Math.min(hi,v));
 const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 
 function ctx(){
-  const p=new Intl.DateTimeFormat("en-US",{timeZone:TIMEZONE,month:"short",day:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date());
+  const p=new Intl.DateTimeFormat("en-US",{timeZone:TIMEZONE,weekday:"short",month:"short",day:"2-digit",year:"numeric"}).formatToParts(new Date());
   const g=t=>p.find(x=>x.type===t)?.value;
   const now=new Date();const start=new Date(now.getFullYear(),0,0);
-  return{date:`${g("month")} ${g("day")} ${g("year")}  ${g("hour")}:${g("minute")}`,year:now.getFullYear(),month:now.getMonth()+1,doy:Math.floor((now-start)/86400000)};
+  return{date:`${g("weekday")}, ${g("month")} ${g("day")} ${g("year")}`,year:now.getFullYear(),month:now.getMonth()+1,doy:Math.floor((now-start)/86400000)};
 }
 
 // map OpenWeatherMap "main" condition -> emoji + short label
@@ -69,7 +69,7 @@ function fetchWeather(){
 
 function buildSpark(){
   const c=ctx();const rng=mulberry32(c.year*100+c.month);
-  const N=12,x0=16,x1=504,top=258,bot=298,base=300;let v=0.42;const pts=[];
+  const N=14,x0=20,x1=700,top=364,bot=406,base=410;let v=0.42;const pts=[];
   for(let i=0;i<N;i++){const step=i<N-1?(rng()-0.5)*0.22+0.02:(rng()*0.10+0.03);v=clamp(v+step,0.08,0.94);pts.push([Math.round(x0+i*(x1-x0)/(N-1)),Math.round(bot-v*(bot-top))]);}
   return{line:"M"+pts.map(p=>`${p[0]} ${p[1]}`).join(" L "),area:`M${x0} ${base} `+pts.map(p=>`L ${p[0]} ${p[1]}`).join(" ")+` L ${x1} ${base} Z`};
 }
@@ -82,12 +82,12 @@ function buildSpark(){
   const trend=`${up?"\u25b2":"\u25bc"} ${up?"+":""}${pct.toFixed(1)}%`;
   const price=(BASE_PRICE*(1+pct/100)).toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
   const spark=buildSpark();
-  const signal=SIGNALS[c.doy%SIGNALS.length];
-  const cups=3+(c.doy%6);const coffee="\u2593".repeat(cups)+`  ${cups} cups`;
+  const signal=SIGNAL;
+  const cups=3;const coffee="\u2593".repeat(cups)+`  ${cups} cups`;
   const w=await fetchWeather();
 
   const tape="    "+TAPE_ITEMS.join("      \u2022      ")+"      \u2022  ";
-  const tapeW=Math.round(tape.length*8.0);
+  const tapeW=Math.round(tape.length*9.0);
   const tapeDur=Math.max(16,Math.round(tapeW/48));
 
   let svg=fs.readFileSync("template.svg","utf8")
@@ -104,7 +104,7 @@ function buildSpark(){
     .replace("{{SPARK_AREA}}",spark.area)
     .replace("{{SPARK_LINE}}",spark.line)
     .replace("{{TAPE_W}}",tapeW)
-    .replace("{{TAPE_X2}}",76+tapeW)
+    .replace("{{TAPE_X2}}",104+tapeW)
     .replace("{{TAPE_DUR}}",tapeDur)
     .replaceAll("{{TAPE}}",esc(tape));
 
