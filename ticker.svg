@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="520" height="348" viewBox="0 0 520 348" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="468" viewBox="0 0 720 468" fill="none">
   <defs>
-    <clipPath id="tape"><rect x="68" y="306" width="451" height="41"/></clipPath>
+    <clipPath id="tape"><rect x="92" y="418" width="627" height="49"/></clipPath>
     <linearGradient id="spark" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#3fb950" stop-opacity="0.32"/>
       <stop offset="1" stop-color="#3fb950" stop-opacity="0"/>
@@ -20,58 +20,76 @@
     @keyframes pulse { 0%,100% { opacity:1 } 50% { opacity:.25 } }
   </style>
 
-  <rect class="bg brd" x="0.5" y="0.5" width="519" height="347" rx="10"/>
+  <rect class="bg brd" x="0.5" y="0.5" width="719" height="467" rx="12"/>
 
-  <rect x="1" y="1" width="518" height="30" rx="9" fill="#111722"/>
-  <text class="mono head" x="16" y="21" font-size="13" font-weight="700">LIVIA CAPITAL · RESEARCH TERMINAL</text>
-  <circle class="up live" cx="292" cy="16" r="4"/>
-  <text class="mono up" x="302" y="21" font-size="11">LIVE</text>
-  <text class="mono dim" x="504" y="21" font-size="10" text-anchor="end">Jul 30 2026  18:26 ET</text>
+  <!-- top bar -->
+  <rect x="1" y="1" width="718" height="36" rx="11" fill="#111722"/>
+  <text class="mono head" x="20" y="25" font-size="15" font-weight="700">LIVIA CAPITAL · RESEARCH TERMINAL</text>
+  <circle class="up live" cx="410" cy="19" r="4.5"/>
+  <text class="mono up" x="421" y="25" font-size="12">LIVE</text>
+  <text class="mono dim" x="700" y="25" font-size="11" text-anchor="end">Thu, Jul 30 2026</text>
 
-  <text class="mono head" x="16"  y="66" font-size="26" font-weight="700">$LIVIA</text>
-  <text class="mono dim"  x="140" y="66" font-size="14">1,427.89</text>
-  <text class="mono"      x="250" y="66" font-size="19" font-weight="700" fill="#3fb950">▲ +2.0%</text>
-  <rect x="360" y="47" width="150" height="25" rx="6" fill="#0f2a17" stroke="#1f5132"/>
-  <text class="mono up"   x="435" y="64" font-size="12" font-weight="700" text-anchor="middle">UNDERVALUED</text>
-  <text class="mono dim"  x="16"  y="88" font-size="11">Software / Data Engineer · MS Information Systems @ Northeastern</text>
+  <!-- headline -->
+  <text class="mono head" x="20"  y="80" font-size="32" font-weight="700">$LIVIA</text>
+  <text class="mono dim"  x="180" y="80" font-size="17">1,427.89</text>
+  <text class="mono"      x="310" y="80" font-size="23" font-weight="700" fill="#3fb950">▲ +2.0%</text>
+  <rect x="520" y="57" width="180" height="30" rx="7" fill="#0f2a17" stroke="#1f5132"/>
+  <text class="mono up"   x="610" y="77" font-size="14" font-weight="700" text-anchor="middle">STRONG BUY</text>
+  <text class="mono dim"  x="20"  y="104" font-size="12.5">Software / Data Engineer · MS Information Systems @ Northeastern</text>
 
-  <line class="brd" x1="16" y1="100" x2="504" y2="100"/>
+  <line class="brd" x1="20" y1="120" x2="700" y2="120"/>
 
-  <g class="mono" font-size="12">
-    <text class="lbl" x="16" y="126">DEGREE</text>
-    <text class="val" x="120" y="126">MS · Northeastern</text>
-    <text class="up" x="504" y="126" text-anchor="end">▲ shipped 🎓</text>
-    <text class="lbl" x="16" y="146">FINN</text>
-    <text class="val" x="120" y="146">FinnSphere</text>
-    <text class="up" x="504" y="146" text-anchor="end">▲ building</text>
-    <text class="lbl" x="16" y="166">STACK</text>
-    <text class="val" x="120" y="166">PY · SQL · React · AWS</text>
-    <text class="up" x="504" y="166" text-anchor="end">▲ +leveling</text>
-    <text class="lbl" x="16" y="186">WEATHER</text>
-    <text class="val" x="120" y="186">Boston — ☁️</text>
-    <text class="up" x="504" y="186" text-anchor="end">▲ offline</text>
-    <text class="lbl" x="16" y="206">COFFEE</text>
-    <text class="val" x="120" y="206">▓▓▓▓  4 cups</text>
-    <text class="up" x="504" y="206" text-anchor="end">▲ high volume</text>
-    <text class="lbl" x="16" y="226">HIRING</text>
-    <text class="val" x="120" y="226">2026 new grad</text>
-    <text class="up" x="504" y="226" text-anchor="end">▲ OPEN</text>
+  <!-- watchlist -->
+  <g class="mono" font-size="13">
+    <text class="lbl" x="20" y="148">DEGREE</text>
+    <text class="val" x="150" y="148">MS · Northeastern</text>
+    <text class="up" x="700" y="148" text-anchor="end">▲ shipped 🎓</text>
+
+    <text class="lbl" x="20" y="174">FINN</text>
+    <text class="val" x="150" y="174">FinnSphere · AI research assistant</text>
+    <text class="up" x="700" y="174" text-anchor="end">▲ building</text>
+
+    <text class="lbl" x="20" y="200">STACK</text>
+    <text class="val" x="150" y="200">Python · TypeScript · React · FastAPI · SQL</text>
+    <text class="up" x="700" y="200" text-anchor="end">▲ core</text>
+
+    <text class="lbl" x="20" y="226">CLOUD</text>
+    <text class="val" x="150" y="226">AWS · Docker · Terraform · GH Actions</text>
+    <text class="up" x="700" y="226" text-anchor="end">▲ scaling</text>
+
+    <text class="lbl" x="20" y="252">AI / LLM</text>
+    <text class="val" x="150" y="252">LangGraph · RAG · Embeddings · Vector Search</text>
+    <text class="up" x="700" y="252" text-anchor="end">▲ hot sector</text>
+
+    <text class="lbl" x="20" y="278">WEATHER</text>
+    <text class="val" x="150" y="278">Boston 68°F ⛅</text>
+    <text class="up" x="700" y="278" text-anchor="end">▲ partly cloudy</text>
+
+    <text class="lbl" x="20" y="304">COFFEE</text>
+    <text class="val" x="150" y="304">▓▓▓  3 cups</text>
+    <text class="up" x="700" y="304" text-anchor="end">▲ high volume</text>
+
+    <text class="lbl" x="20" y="330">HIRING</text>
+    <text class="val" x="150" y="330">2026 new grad · open to offers</text>
+    <text class="up" x="700" y="330" text-anchor="end">▲ OPEN</text>
   </g>
 
-  <text class="mono dim" x="16" y="248" font-size="10">SKILL INDEX · 12MO</text>
-  <path d="M16 300 L 16 279 L 60 276 L 105 272 L 149 272 L 193 269 L 238 273 L 282 276 L 327 278 L 371 274 L 415 273 L 460 274 L 504 269 L 504 300 Z" fill="url(#spark)"/>
-  <path d="M16 279 L 60 276 L 105 272 L 149 272 L 193 269 L 238 273 L 282 276 L 327 278 L 371 274 L 415 273 L 460 274 L 504 269" fill="none" stroke="#3fb950" stroke-width="2"/>
+  <!-- sparkline -->
+  <text class="mono dim" x="20" y="356" font-size="11">SKILL INDEX · 12MO</text>
+  <path d="M20 410 L 20 386 L 72 383 L 125 378 L 177 379 L 229 376 L 282 379 L 334 383 L 386 385 L 438 380 L 491 379 L 543 381 L 595 376 L 648 375 L 700 374 L 700 410 Z" fill="url(#spark)"/>
+  <path d="M20 386 L 72 383 L 125 378 L 177 379 L 229 376 L 282 379 L 334 383 L 386 385 L 438 380 L 491 379 L 543 381 L 595 376 L 648 375 L 700 374" fill="none" stroke="#3fb950" stroke-width="2.2"/>
 
-  <rect x="1" y="306" width="518" height="41" rx="9" fill="#111722"/>
-  <rect x="1" y="306" width="518" height="3" fill="#3fb950"/>
-  <rect x="1" y="309" width="66" height="38" fill="#f0b429"/>
-  <circle cx="16" cy="328" r="3.5" fill="#0d1117"><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1.2s" repeatCount="indefinite"/></circle>
-  <text class="mono" x="28" y="332" font-size="12" font-weight="700" fill="#0d1117">LIVE</text>
+  <!-- ticker tape -->
+  <rect x="1" y="418" width="718" height="49" rx="11" fill="#111722"/>
+  <rect x="1" y="418" width="718" height="3" fill="#3fb950"/>
+  <rect x="1" y="421" width="90" height="46" fill="#f0b429"/>
+  <circle cx="22" cy="444" r="4" fill="#0d1117"><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1.2s" repeatCount="indefinite"/></circle>
+  <text class="mono" x="36" y="449" font-size="14" font-weight="700" fill="#0d1117">LIVE</text>
   <g clip-path="url(#tape)">
     <g>
-      <animateTransform attributeName="transform" type="translate" from="0 0" to="-2528 0" dur="53s" repeatCount="indefinite"/>
-      <text class="mono amber" x="76"         y="332" font-size="14" font-weight="700">    MS INFORMATION SYSTEMS @ NORTHEASTERN      •      SOFTWARE / DATA ENGINEER      •      NOW BUILDING: FINNSPHERE — AI FINANCIAL RESEARCH ASSISTANT      •      OPEN TO 2026 NEW GRAD ROLES      •      PYTHON · SQL · REACT · AWS · DOCKER      •      LET'S CONNECT ↗ linkedin.com/in/di-olivia-zhang-b0b382333      •  </text>
-      <text class="mono amber" x="2604" y="332" font-size="14" font-weight="700">    MS INFORMATION SYSTEMS @ NORTHEASTERN      •      SOFTWARE / DATA ENGINEER      •      NOW BUILDING: FINNSPHERE — AI FINANCIAL RESEARCH ASSISTANT      •      OPEN TO 2026 NEW GRAD ROLES      •      PYTHON · SQL · REACT · AWS · DOCKER      •      LET'S CONNECT ↗ linkedin.com/in/di-olivia-zhang-b0b382333      •  </text>
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-3627 0" dur="76s" repeatCount="indefinite"/>
+      <text class="mono amber" x="104"         y="449" font-size="15" font-weight="700">    SOFTWARE / DATA ENGINEER · MS INFORMATION SYSTEMS @ NORTHEASTERN      •      NOW BUILDING: FINNSPHERE — AI FINANCIAL RESEARCH ASSISTANT      •      OPEN TO 2026 NEW GRAD ROLES      •      PYTHON · JAVA · TYPESCRIPT · SQL · REACT · FASTAPI · AWS · DOCKER      •      AI / LLM: LANGGRAPH · RAG · EMBEDDINGS · VECTOR SEARCH      •      LET'S CONNECT ↗ linkedin.com/in/di-olivia-zhang-b0b382333      •  </text>
+      <text class="mono amber" x="3731" y="449" font-size="15" font-weight="700">    SOFTWARE / DATA ENGINEER · MS INFORMATION SYSTEMS @ NORTHEASTERN      •      NOW BUILDING: FINNSPHERE — AI FINANCIAL RESEARCH ASSISTANT      •      OPEN TO 2026 NEW GRAD ROLES      •      PYTHON · JAVA · TYPESCRIPT · SQL · REACT · FASTAPI · AWS · DOCKER      •      AI / LLM: LANGGRAPH · RAG · EMBEDDINGS · VECTOR SEARCH      •      LET'S CONNECT ↗ linkedin.com/in/di-olivia-zhang-b0b382333      •  </text>
     </g>
   </g>
 </svg>
