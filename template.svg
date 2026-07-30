@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="348" viewBox="0 0 520 348" fill="none">
+  <defs>
+    <clipPath id="tape"><rect x="68" y="306" width="451" height="41"/></clipPath>
+    <linearGradient id="spark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="{{DIR_COLOR}}" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="{{DIR_COLOR}}" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .bg   { fill: #0a0e14; }
+    .brd  { stroke: #1c2430; stroke-width: 1; }
+    .mono { font-family: 'SF Mono','Consolas',ui-monospace,monospace; }
+    .lbl  { fill: #6e7681; }
+    .val  { fill: #e6edf3; }
+    .up   { fill: #3fb950; }
+    .amber{ fill: #f0b429; }
+    .head { fill: #e6edf3; }
+    .dim  { fill: #8b949e; }
+    .live { animation: pulse 1.6s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity:1 } 50% { opacity:.25 } }
+  </style>
+
+  <rect class="bg brd" x="0.5" y="0.5" width="519" height="347" rx="10"/>
+
+  <rect x="1" y="1" width="518" height="30" rx="9" fill="#111722"/>
+  <text class="mono head" x="16" y="21" font-size="13" font-weight="700">LIVIA CAPITAL · RESEARCH TERMINAL</text>
+  <circle class="up live" cx="292" cy="16" r="4"/>
+  <text class="mono up" x="302" y="21" font-size="11">LIVE</text>
+  <text class="mono dim" x="504" y="21" font-size="10" text-anchor="end">{{DATE}} ET</text>
+
+  <text class="mono head" x="16"  y="66" font-size="26" font-weight="700">$LIVIA</text>
+  <text class="mono dim"  x="140" y="66" font-size="14">{{PRICE}}</text>
+  <text class="mono"      x="250" y="66" font-size="19" font-weight="700" fill="{{DIR_COLOR}}">{{TREND}}</text>
+  <rect x="360" y="47" width="150" height="25" rx="6" fill="#0f2a17" stroke="#1f5132"/>
+  <text class="mono up"   x="435" y="64" font-size="12" font-weight="700" text-anchor="middle">{{SIGNAL}}</text>
+  <text class="mono dim"  x="16"  y="88" font-size="11">Software / Data Engineer · MS Information Systems @ Northeastern</text>
+
+  <line class="brd" x1="16" y1="100" x2="504" y2="100"/>
+
+  <g class="mono" font-size="12">
+    <text class="lbl" x="16" y="126">DEGREE</text>
+    <text class="val" x="120" y="126">MS · Northeastern</text>
+    <text class="up" x="504" y="126" text-anchor="end">▲ shipped 🎓</text>
+    <text class="lbl" x="16" y="146">FINN</text>
+    <text class="val" x="120" y="146">FinnSphere</text>
+    <text class="up" x="504" y="146" text-anchor="end">▲ building</text>
+    <text class="lbl" x="16" y="166">STACK</text>
+    <text class="val" x="120" y="166">PY · SQL · React · AWS</text>
+    <text class="up" x="504" y="166" text-anchor="end">▲ +leveling</text>
+    <text class="lbl" x="16" y="186">WEATHER</text>
+    <text class="val" x="120" y="186">{{CITY}} {{TEMP}} {{ICON}}</text>
+    <text class="up" x="504" y="186" text-anchor="end">▲ {{SKY}}</text>
+    <text class="lbl" x="16" y="206">COFFEE</text>
+    <text class="val" x="120" y="206">{{COFFEE}}</text>
+    <text class="up" x="504" y="206" text-anchor="end">▲ high volume</text>
+    <text class="lbl" x="16" y="226">HIRING</text>
+    <text class="val" x="120" y="226">2026 new grad</text>
+    <text class="up" x="504" y="226" text-anchor="end">▲ OPEN</text>
+  </g>
+
+  <text class="mono dim" x="16" y="248" font-size="10">SKILL INDEX · 12MO</text>
+  <path d="{{SPARK_AREA}}" fill="url(#spark)"/>
+  <path d="{{SPARK_LINE}}" fill="none" stroke="{{DIR_COLOR}}" stroke-width="2"/>
+
+  <rect x="1" y="306" width="518" height="41" rx="9" fill="#111722"/>
+  <rect x="1" y="306" width="518" height="3" fill="{{DIR_COLOR}}"/>
+  <rect x="1" y="309" width="66" height="38" fill="#f0b429"/>
+  <circle cx="16" cy="328" r="3.5" fill="#0d1117"><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1.2s" repeatCount="indefinite"/></circle>
+  <text class="mono" x="28" y="332" font-size="12" font-weight="700" fill="#0d1117">LIVE</text>
+  <g clip-path="url(#tape)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-{{TAPE_W}} 0" dur="{{TAPE_DUR}}s" repeatCount="indefinite"/>
+      <text class="mono amber" x="76"         y="332" font-size="14" font-weight="700">{{TAPE}}</text>
+      <text class="mono amber" x="{{TAPE_X2}}" y="332" font-size="14" font-weight="700">{{TAPE}}</text>
+    </g>
+  </g>
+</svg>
