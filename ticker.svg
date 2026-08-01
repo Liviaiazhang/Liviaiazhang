@@ -51,7 +51,7 @@
     <text class="up" x="700" y="174" text-anchor="end">▲ building</text>
 
     <text class="lbl" x="20" y="200">STACK</text>
-    <text class="val" x="150" y="200">Python · TypeScript · React · FastAPI · SQL</text>
+    <text class="val" x="150" y="200">Python · Java · TypeScript · React · FastAPI · PostgreSQL</text>
     <text class="up" x="700" y="200" text-anchor="end">▲ core</text>
 
     <text class="lbl" x="20" y="226">CLOUD</text>
