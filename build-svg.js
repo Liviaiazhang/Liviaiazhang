@@ -83,7 +83,7 @@ function buildSpark(){
   const price=(BASE_PRICE*(1+pct/100)).toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
   const spark=buildSpark();
   const signal=SIGNAL;
-  const cups=3;const coffee="\u2593".repeat(cups)+`  ${cups} cups`;
+  const cups=3;const coffee=`${cups} cups`;
   const w=await fetchWeather();
 
   const tape="    "+TAPE_ITEMS.join("      \u2022      ")+"      \u2022  ";
