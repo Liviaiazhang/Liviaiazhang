@@ -67,7 +67,10 @@
     <text class="up" x="700" y="278" text-anchor="end">▲ partly cloudy</text>
 
     <text class="lbl" x="20" y="304">COFFEE</text>
-    <text class="val" x="150" y="304">▓▓▓  3 cups</text>
+    <rect x="150" y="294" width="9" height="11" rx="1.5" fill="#3fb950"/>
+    <rect x="163" y="289" width="9" height="16" rx="1.5" fill="#3fb950"/>
+    <rect x="176" y="298" width="9" height="7"  rx="1.5" fill="#3fb950"/>
+    <text class="val" x="196" y="304">3 cups</text>
     <text class="up" x="700" y="304" text-anchor="end">▲ high volume</text>
 
     <text class="lbl" x="20" y="330">HIRING</text>
