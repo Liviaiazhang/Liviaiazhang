@@ -63,7 +63,7 @@
     <text class="up" x="700" y="252" text-anchor="end">▲ hot sector</text>
 
     <text class="lbl" x="20" y="278">WEATHER</text>
-    <text class="val" x="150" y="278">Boston 68°F ⛅</text>
+    <text class="val" x="150" y="278">Boston 75°F ⛅</text>
     <text class="up" x="700" y="278" text-anchor="end">▲ partly cloudy</text>
 
     <text class="lbl" x="20" y="304">COFFEE</text>
