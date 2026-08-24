@@ -32,8 +32,8 @@
 
   <!-- headline -->
   <text class="mono head" x="20"  y="80" font-size="32" font-weight="700">$LIVIA</text>
-  <text class="mono dim"  x="180" y="80" font-size="17">1,409.65</text>
-  <text class="mono"      x="310" y="80" font-size="23" font-weight="700" fill="#3fb950">▲ +0.7%</text>
+  <text class="mono dim"  x="180" y="80" font-size="17">1,434.77</text>
+  <text class="mono"      x="310" y="80" font-size="23" font-weight="700" fill="#3fb950">▲ +2.5%</text>
   <rect x="520" y="57" width="180" height="30" rx="7" fill="#0f2a17" stroke="#1f5132"/>
   <text class="mono up"   x="610" y="77" font-size="14" font-weight="700" text-anchor="middle">STRONG BUY</text>
   <text class="mono dim"  x="20"  y="104" font-size="12.5">Software / Data Engineer · MS Information Systems @ Northeastern</text>
@@ -63,7 +63,7 @@
     <text class="up" x="700" y="252" text-anchor="end">▲ hot sector</text>
 
     <text class="lbl" x="20" y="278">WEATHER</text>
-    <text class="val" x="150" y="278">Boston 71°F ⛅</text>
+    <text class="val" x="150" y="278">Boston 68°F ⛅</text>
     <text class="up" x="700" y="278" text-anchor="end">▲ partly cloudy</text>
 
     <text class="lbl" x="20" y="304">COFFEE</text>
