@@ -28,7 +28,7 @@
   <text class="mono head" x="20" y="25" font-size="15" font-weight="700">LIVIA CAPITAL · RESEARCH TERMINAL</text>
   <circle class="up live" cx="410" cy="19" r="4.5"/>
   <text class="mono up" x="421" y="25" font-size="12">LIVE</text>
-  <text class="mono dim" x="700" y="25" font-size="11" text-anchor="end">Tue, Aug 25 2026</text>
+  <text class="mono dim" x="700" y="25" font-size="11" text-anchor="end">Wed, Aug 26 2026</text>
 
   <!-- headline -->
   <text class="mono head" x="20"  y="80" font-size="32" font-weight="700">$LIVIA</text>
@@ -63,7 +63,7 @@
     <text class="up" x="700" y="252" text-anchor="end">▲ hot sector</text>
 
     <text class="lbl" x="20" y="278">WEATHER</text>
-    <text class="val" x="150" y="278">Boston 67°F ⛅</text>
+    <text class="val" x="150" y="278">Boston 64°F ⛅</text>
     <text class="up" x="700" y="278" text-anchor="end">▲ partly cloudy</text>
 
     <text class="lbl" x="20" y="304">COFFEE</text>
