@@ -32,8 +32,8 @@
 
   <!-- headline -->
   <text class="mono head" x="20"  y="80" font-size="32" font-weight="700">$LIVIA</text>
-  <text class="mono dim"  x="180" y="80" font-size="17">1,405.12</text>
-  <text class="mono"      x="310" y="80" font-size="23" font-weight="700" fill="#3fb950">▲ +0.4%</text>
+  <text class="mono dim"  x="180" y="80" font-size="17">1,422.01</text>
+  <text class="mono"      x="310" y="80" font-size="23" font-weight="700" fill="#3fb950">▲ +1.6%</text>
   <rect x="520" y="57" width="180" height="30" rx="7" fill="#0f2a17" stroke="#1f5132"/>
   <text class="mono up"   x="610" y="77" font-size="14" font-weight="700" text-anchor="middle">STRONG BUY</text>
   <text class="mono dim"  x="20"  y="104" font-size="12.5">Software / Data Engineer · MS Information Systems @ Northeastern</text>
@@ -63,7 +63,7 @@
     <text class="up" x="700" y="252" text-anchor="end">▲ hot sector</text>
 
     <text class="lbl" x="20" y="278">WEATHER</text>
-    <text class="val" x="150" y="278">Boston 77°F ⛅</text>
+    <text class="val" x="150" y="278">Boston 71°F ⛅</text>
     <text class="up" x="700" y="278" text-anchor="end">▲ partly cloudy</text>
 
     <text class="lbl" x="20" y="304">COFFEE</text>
@@ -80,8 +80,8 @@
 
   <!-- sparkline -->
   <text class="mono dim" x="20" y="356" font-size="11">SKILL INDEX · 12MO</text>
-  <path d="M20 410 L 20 389 L 72 386 L 125 383 L 177 378 L 229 374 L 282 377 L 334 376 L 386 371 L 438 373 L 491 373 L 543 373 L 595 376 L 648 374 L 700 369 L 700 410 Z" fill="url(#spark)"/>
-  <path d="M20 389 L 72 386 L 125 383 L 177 378 L 229 374 L 282 377 L 334 376 L 386 371 L 438 373 L 491 373 L 543 373 L 595 376 L 648 374 L 700 369" fill="none" stroke="#3fb950" stroke-width="2.2"/>
+  <path d="M20 410 L 20 388 L 72 383 L 125 385 L 177 389 L 229 387 L 282 386 L 334 383 L 386 383 L 438 384 L 491 382 L 543 380 L 595 376 L 648 377 L 700 372 L 700 410 Z" fill="url(#spark)"/>
+  <path d="M20 388 L 72 383 L 125 385 L 177 389 L 229 387 L 282 386 L 334 383 L 386 383 L 438 384 L 491 382 L 543 380 L 595 376 L 648 377 L 700 372" fill="none" stroke="#3fb950" stroke-width="2.2"/>
 
   <!-- ticker tape -->
   <g clip-path="url(#card)">
