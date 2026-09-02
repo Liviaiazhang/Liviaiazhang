@@ -28,7 +28,7 @@
   <text class="mono head" x="20" y="25" font-size="15" font-weight="700">LIVIA CAPITAL · RESEARCH TERMINAL</text>
   <circle class="up live" cx="410" cy="19" r="4.5"/>
   <text class="mono up" x="421" y="25" font-size="12">LIVE</text>
-  <text class="mono dim" x="700" y="25" font-size="11" text-anchor="end">Tue, Sep 01 2026</text>
+  <text class="mono dim" x="700" y="25" font-size="11" text-anchor="end">Wed, Sep 02 2026</text>
 
   <!-- headline -->
   <text class="mono head" x="20"  y="80" font-size="32" font-weight="700">$LIVIA</text>
